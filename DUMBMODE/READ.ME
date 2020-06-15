@@ -1,0 +1,19 @@
+  Simple program to set comm port mode before invoking BinkleyTerm under
+  OS/2 2.0 with Gary Rosema's com16550.sys
+
+  Communications parameters for COM1 are set to 19200 baud,
+  8 data bits, no parity, and 1 stop bit.
+
+  Usage is:  dumbmode
+
+  Released to the public domain by John Tarbox (FidoNet 1:150/130.0)
+
+
+WHY ?
+     When using one of Gary's excellent comm drivers under OS/2 2.0, the MODE
+command is unable to work with the comm driver.  On my system at least, if the
+communications port parameters are not properly set before invoking BinkleyTerm
+then BinkleyTerm will lock up.	To get around this problem I wrote the enclosed
+C program to set these parameters.  Since source code is included, and the
+program os extremely simple, it should be easy to modify to meet your unique
+requirements.  The enclosed dumbmode.exe was built with the MX C 6.0 compiler.
